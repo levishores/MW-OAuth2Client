@@ -44,7 +44,7 @@ class SpecialOAuth2Client extends SpecialPage {
 
 		require __DIR__ . '/vendors/oauth2-client/vendor/autoload.php';
 
-		$this->_provider = new \League\OAuth2\Client\Provider\GenericProvider([
+		$this->_provider = new TheNetworg\OAuth2\Client\Provider\Azure([
 			'clientId'                => $wgOAuth2Client['client']['id'],    // The client ID assigned to you by the provider
 			'clientSecret'            => $wgOAuth2Client['client']['secret'],   // The client password assigned to you by the provider
 			'redirectUri'             => $wgOAuth2Client['configuration']['redirect_uri'],
